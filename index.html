@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+
+<html lang = "es">
+ <head>
+    <title>Cuarentena_Animales</title>
+    <meta charset="utf-8">
+    
+  </head>
+
+  <body>
+    <header>
+
+<div id="container" class="container">
+      <div class="row-fluid">
+      <h1>Seguimiento Cuarentenario a Animales Importados en Colombia</h1>
+    </div>
+        
+        <div class="row-fluid">
+        <div class="span12">
+        <p>El Instituto Colombiano Agropecuario - ICA por medio de la Dirección Técnica de Cuarentena se encarga de hacer seguimiento 
+         a animales importados a los cuales se les ha aplicado alguna medida cuarentenaria.</p> 
+        <p>Esta visualización presenta la distribución del número de cuarentenas según la clasificación del animal y 
+          para cada categoría la distribución de acuerdo al país de origen, para lo corrido del primer semestre de 2018. La información permite alertar sobre los países con más riesgo de cuarentena. Lo datos son tomados de la plataforma de datos Abiertos de Colombia en <a href="https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Seguimiento-Cuarentenario-A-Animales-Importados/3x37-tpa6">Seguimiento Cuarentenario a Animales Importados</a>.</p>
+         </div>
+         </div>
+</div>        
+ 
+  </header>
+
+<div id="container" class="container">
+    <div class='row'>
+  <h2> Animales en Cuarentena</h2>
+        <p>La categoría de animal que desea consultar</p>
+          <div class='radio'>
+            <label class='radio-inline'>
+              <input type="radio" name="Animales" value="Aves reproducción"  onclick="updateGrap(value) "  > Aves reproducción
+            </label>
+            <label class='radio-inline'>
+              <input type="radio" name="Animales" value="Bovinos"  onclick="updateGrap(value) "> Bovinos
+            </label>
+            <label class='radio-inline'>
+              <input type="radio" name="Animales" value="Equinos" onclick="updateGrap(value) " > Equinos
+            </label>
+
+            <label class='radio-inline'>
+              <input type="radio" name="Animales" value="Ovinos" onclick="updateGrap(value) " > Ovinos
+            </label>
+            <label class='radio-inline'>
+              <input type="radio" name="Animales" value="Porcinos"  onclick="updateGrap(value) "> Porcinos
+            </label>
+            <label class='radio-inline'>
+              <input type="radio" name="Animales" value="Roedores" onclick="updateGrap(value) " > Roedores
+            </label>
+                  </div>
+      
+
+
+<!--script src="https://d3js.org/d3.v5.min.js"></script> -->
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<div id="graph"></div>
+<script src="script/app1.js"></script>
+<script src="https://d3js.org/d3-transition.v1.min.js"></script>
+
+
+
+<div id="container" class="container">
+      <div class="row-fluid">
+      <h2>Abstraccíón What-Why-How</h2>
+    </div>
+        
+        <div class="row-fluid">
+        <div class="span12">
+        <p>A continuación se describe la abstracíón <i>What-Why-How</i> de acuerdo con Tamara Munzner.</p> 
+
+        <p><b>What:</b></p>
+        <ul style="list-style-type:square">
+        <li>Fuente: Datos Abiertos de Colombia, Instituto Colombiano Agropecuario- Dirección Técnica de Cuarentena. <a href="https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Seguimiento-Cuarentenario-A-Animales-Importados/3x37-tpa6">Seguimiento Cuarentenario a Animales Importados</a> </li>
+        <li>DataSet: Tabla estática, con 4 atributos:
+          <ul>
+            <li>Cuarentenas: Número de cuarentenas, ordenado-cuantitativo-secuencial</li>
+            <li>Animal: Categórico, 6 categorías de clasificación animal</li>
+            <li>Lugar: Categórico, 7 ciudades donde llegan los animales</li>
+            <li>Procedencia: Categórico el país de procedencia</li>
+           </ul> 
+        </li>
+       </ul>
+
+
+
+        <p><b>Why:</b></p>
+        <ul style="list-style-type:square">
+         <li><b>Tarea Principal:</b> Identificar la clasificación de animal con más frecuencia de cuarentena y el país de donde más se importa dicha clase de animal. (<b>Analize-Consume-present / Search-Browse-Features</b>). 
+        </li>
+        <li><b>Tarea secundaria</b>: Comparar la frecuencia de cuarentenas, entre clasificación de animales y procedencia.
+          (<b>Analize-Consume-present / Query-Compare-Features</b>)</li>
+       </ul>
+
+        <p><b>How:</b></p>
+        <ul style="list-style-type:square">
+         <li><b>Bar Chart 1</b>: Marcas de línea expresando el valor de número de Cuarentenas en el canal de posición vertical alineado,separados por el atributo Clasificación Animal en el canal de posición horizontal. (<b>Express Values, Separate-order-Aling-regions</b>)
+        </li>
+        <li><b>Interacción </b>: El usuario selecciona la categoría de animal de su interés, y se muestra el Bar Chart 2, que presenta el número de cuarentenas en esa categoría, desagregado por Procedencia.
+        </li>
+       </ul>
+
+
+
+         </div>
+         </div>
+
+
+
+<link rel="stylesheet" href="script/css/style.css">
+
+
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <script src="http://d3js.org/queue.v1.min.js"></script>
+ <script src="https://d3js.org/topojson.v2.min.js"></script>     
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+<script type="text/javascript">
+  
+
+  
+</script>
+
+
+
+</body>
+
+
+
+
+</html>
+
+
