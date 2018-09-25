@@ -26,7 +26,7 @@ var svg = d3.select("#graph")
 //Grafico principal que aparece por defecto
 
 //Enter selecction
-
+createMainChart = () => {
 d3.json("https://www.datos.gov.co/resource/t8qq-kx9s.json").then(function(data) {
   console.log(data);
    data.forEach(function(d) {
@@ -58,7 +58,8 @@ d3.json("https://www.datos.gov.co/resource/t8qq-kx9s.json").then(function(data) 
   y.domain([0, d3.max(nest, function(d) { return d.value; })]);
 
 
-  // Set up the x axis
+  // Set up2 the x axis
+  svg.html("");
   var xaxis = svg.append("g")
        .attr("transform", "translate(0," + height + ")")
        .attr("class", "x axis")
@@ -103,7 +104,7 @@ svg.append("text")
 
 
 });   
-
+}
 
 
 
@@ -123,6 +124,8 @@ d3.json("https://www.datos.gov.co/resource/t8qq-kx9s.json").then(function(data) 
      d.procedencia = d.procedencia;
      
      })
+
+svg.html("");
 
  var data=data.filter(d => d.animales==value) 
  var nest = d3.nest()
@@ -203,7 +206,7 @@ d3.json("https://www.datos.gov.co/resource/t8qq-kx9s.json").then(function(data) 
 
 
 
-
+createMainChart();
 
 
 
