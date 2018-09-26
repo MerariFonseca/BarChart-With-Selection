@@ -12,7 +12,7 @@ Presentar una visualización con datos Colombianos, en la que se le presenta al 
 Contiene Index.html, app1.js y style.css. 
 
 # Prerequisitos
-Acceso a internet, servidor local desplegado. Se recomienda vía reload npm.
+Acceso a internet, servidor local desplegado. Se recomienda vía reload-npm de nodejs.
 
 # Autores
 Areli Merari Moreno Fonseca https://plus.google.com/u/0/+AreliMoreno
